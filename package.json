@@ -12,14 +12,16 @@
     "@types/react-dom": "^17.0.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-markdown": "^7.1.2",
     "react-scripts": "5.0.0",
+    "remark-gfm": "^3.0.1",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "yarn cross-env NODE_OPTIONS=--experimental-vm-modules react-scripts test --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
